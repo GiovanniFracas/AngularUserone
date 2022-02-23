@@ -1,0 +1,10 @@
+<div *ngFor="let user of users; let i = index">
+  <li
+    class="list-group-item"
+    routerLinkActive="active"
+    [routerLink]="['user-dettagli', user.Nome, user.mail, user.ruolo]"
+  >
+    {{ user.Nome }}
+  </li>
+</div>
+<router-outlet></router-outlet>
